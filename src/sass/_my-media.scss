@@ -1,0 +1,490 @@
+@media screen and (max-width: 1199px) {
+  /* Main slider */
+  .main-slider{
+    .swiper-slide {
+      height: 600px;
+    }
+    &__text-box{
+      min-width: auto;
+    }
+    &__title{
+      font-size: 38px;
+
+    }
+    &__subtitle{
+      margin-top: 10px;
+      line-height: normal;
+      padding: 0;
+    }
+  }
+
+  /* Advantage */
+  .advant-card{
+    width: 168px;
+  }
+
+}
+@media screen and (max-width: 1024px) {
+  body{
+    overflow-x: hidden;
+  }
+  /* header */
+  .header{
+    &__items{
+      height: 70px;
+    }
+    &__nav{
+      position: fixed;
+      right: -101%;
+      top: 70px;
+      display: flex;
+      width: 100%;
+      background: #009dda;
+      transition: right .3s ease;
+      &.open{
+        right: 0;
+      }
+    }
+    &__list{
+      height: calc(100vh - 70px);
+      width: 100%;
+      margin: 0;
+      padding-top: 50px;
+      overflow-y: scroll;
+      flex-direction: column;
+      > li{
+        margin-left: 0;
+        padding: 15px 0px 15px 20px;
+        text-align: left;
+        border-top: 1px solid #fff;
+        width: 100%;
+        .drop-handler{
+          top: 6px;
+          position: absolute;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          &.active{
+            transform: rotate(180deg);
+          }
+          &:before{
+            content: '\f107';
+            font-family: FontAwesome;
+            position: absolute;
+            color: #fff;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        &.active{
+          >a{
+            color: transparent;
+            .speciality-text{
+              opacity: 1;
+            }
+          }
+        }
+        a{
+          color: #fff;
+          position: relative;
+          .speciality-text{
+            color: #fff;
+          }
+        }
+        &:hover{
+          >.drop-menu{
+            top: 0px;
+          }
+          >a{
+            color: transparent;
+            .speciality-text{
+              color: #fff;
+            }
+          }
+        }
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
+    &__search{
+      input{
+        width: 280px;
+        height: 24px;
+      }
+    }
+    .hamburger{
+      display: block;
+    }
+  }
+  .drop-menu{
+    position: relative;
+    opacity: 1;
+    display: none;
+    visibility: visible;
+    background: transparent;
+    top: 0;
+    left: -0;
+    margin-top: 15px;
+    padding: 15px 0 0px 0;
+    text-align: left;
+    &.active{
+      display: block;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+    }
+    &:after{
+      display: none;
+    }
+    li{
+      margin-left: 0;
+      margin-bottom: 0;
+      position: relative;
+      padding: 10px 0px 10px 20px ;
+      .drop-handler{
+        top: 2px;
+      }
+      &:last-child{
+        margin-bottom: 0px;
+      }
+      a{
+        font-size: 14px;
+        color: #fff;
+        &:before{
+          display: none;
+        }
+        &:hover{
+          color: #fff;
+          left: 0;
+          &:before{
+            display: none;
+          }
+        }
+      }
+    }
+    &__drop-handler{
+      &:hover{
+        .drop-menu{
+          top: 0;
+        }
+        >a{
+          left: 0;
+          color: #fff;
+        }
+      }
+    }
+    .drop-menu{
+      position: relative;
+      top: 0;
+      left: auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      li{
+        &:last-child{
+          margin-bottom: 3px;
+        }
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: auto;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+  /* Main slider */
+  .main-slider{
+    .swiper-slide {
+      height: 400px;
+    }
+    &__text-box{
+      min-width: auto;
+    }
+    &__title{
+      font-size: 38px;
+
+    }
+    &__subtitle{
+      margin-top: 10px;
+      line-height: normal;
+      padding: 0;
+    }
+  }
+
+  /* Advantage */
+  .advant-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__title-decription{
+      padding: 0;
+    }
+    &__items{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: 50px;
+    }
+  }
+  .advant-card{
+    width: calc(33.333% - 16px);
+    height: auto;
+    margin-bottom: 16px;
+    padding-bottom: 20px;
+    &:nth-child(4){
+      margin-left: auto;
+      margin-right: 8px;
+    }
+    &:nth-child(5){
+       margin-right: auto;
+      margin-left: 8px;
+     }
+
+  }
+
+  /* Productss */
+  .products{
+    &__box{
+      margin-bottom: 50px;
+    }
+  }
+  .product-box{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .droduct-descrip{
+      text-align: center;
+    }
+  }
+
+  /* About */
+  .about{
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  /* Contact */
+  .contact{
+    &__map{
+      height: 652px;
+    }
+    &__title-decription{
+      margin-bottom: 50px;
+    }
+  }
+  .contact-form {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 10px;
+    margin-left: -300px;
+    max-width: 600px;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    &__form-item{
+      label.error{
+        top: -12px;
+      }
+    }
+    &__contact-text{
+      padding-top: 40px;
+      padding-left: 0px;
+      padding-right: 0;
+    }
+    &__numbers{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__emails{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__input-grup{
+      flex-direction: column;
+      input{
+        width: 100%;
+        margin-bottom: 13px;
+      }
+      select{
+        width: 100%;
+      }
+      textarea{
+        width: 100%;
+      }
+      .chosen-container{
+        min-width: 100%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  h2{
+    font-size: 30px;
+  }
+  /* Main slider */
+  .main-slider{
+    .swiper-slide {
+    }
+    &__text-box{
+      min-width: auto;
+    }
+    &__title{
+      font-size: 28px;
+
+    }
+    &__subtitle{
+      margin-top: 10px;
+      line-height: normal;
+      padding: 0;
+    }
+  }
+
+  /* About */
+  .about{
+    &__img-box {
+      padding-top: 0;
+      text-align: center;
+    }
+  }
+
+  /* Contact */
+  .contact-form {
+    margin-left: -155px;
+    max-width: 310px;
+    width: 100%;
+   .btn-yellow{
+     padding: 0 16px;
+   }
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  h2{
+    text-align: center;
+  }
+  /* Advantage */
+  .advant-section{
+    &__items{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-top: 50px;
+    }
+  }
+  .advant-card{
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    padding-bottom: 20px;
+    &:nth-child(4){
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &:nth-child(5){
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  /* Products */
+  .products{
+    &__title{
+      top: 25px;
+    }
+  }
+  
+  /* about */
+  .about-text{
+    &__title{
+      text-align: left;
+    } 
+  }
+
+  /* Header*/
+  .header{
+    .hamburger{
+      min-width: 22px;
+    }
+    &__search{
+      margin-left: 10px;
+      margin-right: 10px;
+      input{
+        width: 100%;
+        height: 24px;
+        padding-left: 10px;
+        padding-right: 30px;
+      }
+      button{
+        right: 10px;
+      }
+    }
+  }
+
+  /* Main Slider */
+  .main-slider{
+    &__title{
+      font-size: 24px;
+    }
+    &__subtitle{
+      font-size: 12px;
+    }
+  }
+  .swiper-button-prev, .swiper-button-next{
+    width: 20px;
+  }
+  .swiper-button-prev{
+    left: 15px;
+  }
+  .swiper-button-next{
+    right: 15px;
+  }
+
+  /* Footer */
+  footer{
+    .footer-container{
+      flex-direction: column-reverse;
+      align-items: center;
+      &__company{
+        padding-top: 14px;
+        text-align: center;
+      }
+    }
+  }
+}
+
